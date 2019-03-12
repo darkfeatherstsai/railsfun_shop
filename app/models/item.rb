@@ -7,5 +7,5 @@ class Item < ActiveRecord::Base
      icon: "150x150#"
     },
    default_url: "/images/:style/missing.png"
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+  validates_attachment_content_type :cover, content_type: /\Aimage\/.*\z/
 end

@@ -1,4 +1,2 @@
-class Cate < ActiveRecord::Base
-  has_many :item
-  
+class Cate < ApplicationRecord
 end
