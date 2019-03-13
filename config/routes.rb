@@ -5,9 +5,6 @@ Rails.application.routes.draw do
     member do
       get :add_cart
     end
-    collction do
-      
-    end
   end
 
   devise_for :managers

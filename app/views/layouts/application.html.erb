@@ -2,16 +2,17 @@
 <html>
   <head>
     <title>Shop</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+    <%= yield :header %>
   </head>
 
   <body>
 
     <h1>對外頁面:public</h1>
+    <div>購物車數量：<span id="cart_counter"><%= get_cart_count %></span></div>
+    <%= session[:cart] %>
 
     <% if current_user %>
       hi! <%= current_user.email %>
