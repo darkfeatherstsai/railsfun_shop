@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  resources :cates
+
+  resources :items do
+    member do
+      get :add_cart
+    end
+    collction do
+      
+    end
+  end
+
   devise_for :managers
   devise_for :users
   resources :statics , :only => [:index]

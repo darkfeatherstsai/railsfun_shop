@@ -21,6 +21,7 @@ gem "awesome_print"
 gem "rails-pry"
 gem "devise"
 gem "paperclip"
+gem "faker"
 
 
 # Use CoffeeScript for .coffee assets and views
