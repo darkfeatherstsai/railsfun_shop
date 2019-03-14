@@ -1,9 +1,14 @@
 <h1>New Item</h1>
 
-<%= form_for(@item , dashboard_admin_items_path , :method => "post") do |f| %>
-  名稱<%= f.text_field :name %><br/>
-  價格<%= f.number_field :price%>
-  <button type="submit">送出</button>
+<%= form_for(@item , :url => dashboard_admin_items_path , :method => "post") do |f| %>
+
+  名稱： <%= f.text_field :name %><br>
+  價格： <%= f.number_field :price %><br>
+  圖片： <%= f.file_field :cover %><br>
+  類別： <%= f.select :cate_id, Cate.all.map{|c|[c.name, c.id]} %>
+
+  <button type="submit" >送出</button>
+
 <% end %>
 
 <%= link_to 'Back', items_path %>

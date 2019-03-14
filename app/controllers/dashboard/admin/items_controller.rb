@@ -12,7 +12,7 @@ class Dashboard::Admin::ItemsController < Dashboard::Admin::AdminController
   # POST /items
   def create
     @item = Item.new(item_params)
-    if @item.save
+    if @item.save!
       redirect_to @item, notice: 'Item was successfully created.'
     else
       render :new
